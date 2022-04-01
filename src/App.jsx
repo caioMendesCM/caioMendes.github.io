@@ -1,11 +1,17 @@
-import { BrowserRouter } from 'react-router-dom';
-import Base from './Base';
+import { BrowserRouter, Route } from 'react-router-dom';
+import Nav from './components/Nav';
+import Home from './components/Home';
 import './App.css';
 
 function App() {
   return (
     <BrowserRouter>
-      <Base/>
+      <Nav />
+      <Route path={'/home'} component={Home} />
+      {/* <Route path={'/about'} component={About} />
+      <Route path={'/projects'} component={Projects} />
+      <Route path={'/skills'} component={Skills} />
+      <Route path={'/contacts'} component={Contacts} /> */}
     </BrowserRouter>
   );
 }

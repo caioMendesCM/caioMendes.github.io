@@ -1,0 +1,24 @@
+.navBtn {
+  padding: 16px 16px;
+  width: 64px !important;
+  height: 64px;
+  width: fit-content;
+}
+
+.icon {
+  /* z-index: 100; */
+  width: 100%;
+  filter: invert(46%) sepia(14%) saturate(1227%) hue-rotate(128deg)
+    brightness(95%) contrast(84%);
+  pointer-events: none;
+}
+
+.navBtn:hover .icon, .navBtn.selected .icon {
+  filter: invert(100%) sepia(0%) saturate(26%) hue-rotate(23deg)
+    brightness(105%) contrast(108%);
+}
+
+.selected {
+  background-color: rgba(0, 131, 193,0.1);
+  box-shadow: inset 2px 0 rgb(0 131 193);
+}
