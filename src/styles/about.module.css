@@ -1,0 +1,60 @@
+.content {
+  display: flex;
+  justify-content: space-around;
+  background-color: #1e1e1e;
+  width: 100%;
+  overflow: hidden;
+}
+
+.leftContainer {
+  margin: 48px 0;
+  width: 40%;
+}
+
+.textBlock {
+  height: 85%;
+  overflow: scroll;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  padding-right: 8px;
+}
+
+.textBlock::-webkit-scrollbar {
+  padding: 4px;
+  width: 8px;
+}
+
+.textBlock::-webkit-scrollbar-track {
+  background: rgba(0, 131, 193, .1);
+  border-radius: 8px;
+}
+
+.textBlock::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: rgba(0, 131, 193);
+}
+
+.title {
+  color: white;
+  margin-bottom: 32px;
+  font-weight: 500;
+}
+
+.text {
+  color: white;
+  text-align: justify;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.rightContainer {
+  margin: 48px 0;
+  width: 40%;
+}
+
+.listBlock {
+  height: 85%;
+  /* overflow: scroll; */
+}

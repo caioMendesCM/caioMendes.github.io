@@ -21,15 +21,11 @@ class Home extends React.Component {
   }
 
   render() {
-    const image = '../images/codeBg.jpg';
-    const profilePic = '../images/DSC_8116.png';
+    // const backgroundImage = '../images/codeBg.jpg';
+    const profilePic = '../images/profilePic.png';
     const { width, height } = this.state;
     return (
       <div className={styles.content}>
-        <canvas
-          className={styles.shadow}
-          height={`${height}`}
-          width={`${width}`}></canvas>
         <div className={styles.textBlock}>
           <div>
             <h1 className={styles.title}>Olá, eu sou</h1>
@@ -46,16 +42,15 @@ class Home extends React.Component {
           </div>
         </div>
         <img className={styles.pic} src={profilePic} alt='' />
-        <img
-          className={styles.backgroundImage}
-          src={image}
-          alt=''
-          height={`${height}`}
-          width={`${width}`}></img>
+        {/* <canvas
+          className={styles.shadow}
+          width={width}
+          height={height}></canvas> */}
         <canvas
-          className={styles.background}
-          height={`${height}`}
-          width={`${width}`}></canvas>
+          className={styles.backgroundImage}
+          width={width}
+          height={height}
+        />
       </div>
     );
   }

@@ -1,34 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
 import NavBtn from './NavBtn';
 import style from '../styles/nav.module.css';
+import { useHistory } from 'react-router-dom';
 
-class Nav extends React.Component {
-  constructor() {
-    super();
-    this.navBtnHandler = this.navBtnHandler.bind(this);
-    this.state = {
-      selected: 'home',
-    };
+function Nav(props) {
+  const [selected = 'home', setSelected] = useState();
+  const navigate = useHistory();
+  const navBtnHandler = (e) => {
+    const { id: location } = e.target;
+    setSelected(location);
+    navigate.push(location);
   }
 
-  navBtnHandler(event) {
-    this.setState({
-      selected: event.target.id,
-    });
-  }
-
-  render() {
-    const { selected } = this.state;
-    return (
-      <div className={style.navBar}>
-        <NavBtn name={'home'} navBtnHandler={this.navBtnHandler} selected={selected}/>
-        <NavBtn name={'about'} navBtnHandler={this.navBtnHandler} selected={selected}/>
-        <NavBtn name={'skills'} navBtnHandler={this.navBtnHandler} selected={selected}/>
-        <NavBtn name={'projects'} navBtnHandler={this.navBtnHandler} selected={selected}/>
-        <NavBtn name={'contacts'} navBtnHandler={this.navBtnHandler} selected={selected}/>
-      </div>
-    );
-  }
+  return (
+    <div className={style.navBar}>
+      <NavBtn
+        name={'home'}
+        navBtnHandler={navBtnHandler}
+        selected={selected}
+      />
+      <NavBtn
+        name={'about'}
+        navBtnHandler={navBtnHandler}
+        selected={selected}
+      />
+      <NavBtn
+        name={'skills'}
+        navBtnHandler={navBtnHandler}
+        selected={selected}
+      />
+      <NavBtn
+        name={'projects'}
+        navBtnHandler={navBtnHandler}
+        selected={selected}
+      />
+      <NavBtn
+        name={'contacts'}
+        navBtnHandler={navBtnHandler}
+        selected={selected}
+      />
+    </div>
+  );
 }
 
 export default Nav;

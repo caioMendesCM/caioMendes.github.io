@@ -1,35 +1,31 @@
 .content {
   display: flex;
-  justify-content: space-evenly;
-  background-color: transparent;
-  width: 100%;
-}
-
-.background {
-  position: absolute;
-  z-index: -3;
+  justify-content: space-around;
   background-color: #1e1e1e;
-  opacity: 1;
+  width: 100%;
+  overflow: hidden;
 }
 
 .shadow {
   position: absolute;
-  z-index: -1;
   background-color: black;
   opacity: 0.3;
+  z-index: 1;
 }
 
 .backgroundImage {
   position: absolute;
+  /* height: 100%; */
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../public/images/codeBg.jpg');
+  object-fit: contain;
   filter: blur(13px);
-  object-fit: cover;
-  opacity: 0.25;
-  z-index: -2;
+  opacity: .70;
+  z-index: 0;
 }
 
 .pic {
   align-self: flex-end;
-  height: 800px;
+  height: 900px;
   z-index: 100;
   /* margin-right: 80px; */
 }
@@ -38,13 +34,13 @@
   display: flex;
   flex-flow: column nowrap;
   align-self: center;
-  /* margin-left: 200px; */
-  gap: 100px;
+  z-index: 2;
+  margin-left: 100px;
+  gap: 150px;
 }
 
 .title {
   align-self: center;
-  font-family: 'Fira Code';
   font-style: normal;
   font-weight: 600;
   font-size: 72px;
@@ -54,12 +50,10 @@
 }
 
 .text {
-  font-family: 'Fira Code';
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
   line-height: 26px;
-
   color: #ffffff;
 }
 
